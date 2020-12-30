@@ -4,8 +4,11 @@ import matplotlib.pyplot as plt
 
 # Constants
 from config.constants import *
+import helpers.image_processing as ip
 
-def create_dashboard(imgs_processed):
+def create_dashboard(img_gray):
+    imgs_processed = ip.process_img(img_gray)
+
     fig,axes = plt.subplots(4,4,sharex='col',sharey='row',
                             gridspec_kw={'hspace': 0,'wspace': 0},
                             figsize=(20,16))

@@ -22,24 +22,5 @@ img_gray = ip.read_img(f"resources/{img_fname}")
 ### Sidebar
 sb.create_sidebar(img_rgb,img_gray)
 
-### Image processing
-imgs_processed = ip.process_img(img_gray)
-
 ### Dashboard
-db.create_dashboard(imgs_processed)
-# fig,(ax_blur,ax_line,ax_threshold) = plt.subplots(1,3,
-#                                                   sharex='col',sharey='row',
-#                                                   gridspec_kw={'hspace': 0,'wspace': .01},
-#                                                   figsize=(30,15))
-
-# ax_blur.imshow(img_blur,cmap="gray")
-# ax_blur.axis('off')
-# ax_blur.set_title(f'{blur_type} blurring',fontsize=40)
-# ax_line.imshow(img_line,cmap="gray")
-# ax_line.set_title(f'Canny line detection',fontsize=40)
-# ax_line.axis('off')
-# ax_threshold.imshow(img_binary,cmap="gray")
-# ax_threshold.set_title(f'Binary thresholding',fontsize=40)
-# ax_threshold.axis('off')
-#
-# st.pyplot(fig)
+db.create_dashboard(img_gray)
