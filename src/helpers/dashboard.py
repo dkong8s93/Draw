@@ -17,7 +17,7 @@ def create_dashboard(imgs_processed):
             axes[i][j].set_xticks([])
             axes[i][j].set_yticks([])
             axes[i][j].text(30,30,
-                            f'Gaussian blur: {blur_kernel_size[j]}\n canny line detection: {canny_threshold[i]}',
+                            f'Gaussian blur: {blur_kernel_size[j]}\nCanny line detection: {canny_threshold[i]}',
                             bbox={'facecolor': 'white', 'pad': 10})
 
     st.pyplot(fig)
